@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body class="bg-blue-300">
+
+<header class="bg-custom-blue text-white text-center rounded-b-xl py-5">
+    <h1 class="text-4xl drop-shadow-2xl">Админ панель</h1>
+</header>
+
+<main class="flex flex-row">
+    <section class="w-1/2 flex items-start">
+        <div class="flex-1 flex flex-col justify-center space-y-4 my-5 ml-5">
+            <button aria-label="Редактировать" class="px-4 py-2 rounded-2xl text-white w-full max-w-[350px] h-[50px] bg-blue-500 hover:bg-blue-600 flex items-center justify-center">
+                Редактировать
+            </button>
+            <button aria-label="Добавить" class="px-4 py-2 rounded-2xl text-white w-full max-w-[350px] h-[50px] bg-blue-500 hover:bg-blue-600 flex items-center justify-center">
+                Добавить
+            </button>
+            <button aria-label="Удалить" class="px-4 py-2 rounded-2xl text-white w-full max-w-[350px] h-[50px] bg-blue-500 hover:bg-blue-600 flex items-center justify-center">
+                Удалить
+            </button>
+        </div>        
+        <div class="flex-1 flex flex-col rounded-2xl p-5 m-5 bg-blue-200">
+            <div class="flex justify-center">
+                <img class="p-2 m-2 w-72 h-72 rounded-full" src="/person.png" alt="Пользователь">
+            </div>
+            <p class="bg-white rounded p-2 m-2 text-blue-600 text-xl">
+                <strong class="text-blue-800">ФИО:</strong> Селиванов Даниил Васильевич
+            </p>
+            <p class="bg-white rounded p-2 m-2 text-blue-600 text-xl">
+                <strong class="text-blue-800">Должность:</strong> бухгалтер
+            </p>
+            <p class="bg-white rounded p-2 m-2 text-blue-600 text-xl">
+                <strong class="text-blue-800">Уровень доступа:</strong> 3
+            </p>
+            <p class="bg-white rounded p-2 m-2 text-blue-600 text-xl">
+                <strong class="text-blue-800">Вход:</strong> 09.10.2024 11:23
+            </p>
+        </div>
+    </section>
+
+    <section class="w-1/2 p-5 m-5 rounded-2xl bg-blue-200 cursor-pointer">
+        <div class="container mx-auto px-4 py-5">
+            <div class="flex flex-col gap-4">
+                <div class="bg-white text-blue-600 rounded-lg p-4 col-span-2 ">
+                    <h2 class="text-2xl mb-4">На месте</h2>
+                    <div class="relative">
+                        <!-- Левая стрелка -->
+                        <button id="prev1" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-transparent text-blue-600 p-4 rounded-full hover:bg-blue-300" onclick="nav(event)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <div id="one" class="grid grid-cols-4 grid-rows-1 gap-2 px-12 bg-gray min-h-[200px] overflow-x-auto">
+                            <!-- Повторите этот блок для каждого человека -->
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Эминем" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Эминем</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Дрейк" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Дрейк</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Кендрик Ламар" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Кендрик Ламар</p>
+                            </div>                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Эминем" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Эминем</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Дрейк" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Дрейк</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Кендрик Ламар" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Кендрик Ламар</p>
+                            </div>                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Эминем" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Эминем</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Дрейк" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Дрейк</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Кендрик Ламар" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Кендрик Ламар</p>
+                            </div>                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Эминем" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Эминем</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Дрейк" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Дрейк</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Кендрик Ламар" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Кендрик Ламар</p>
+                            </div>                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Эминем" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Эминем</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Дрейк" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Дрейк</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Кендрик Ламар" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Кендрик Ламар</p>
+                            </div>                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Эминем" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Эминем</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Дрейк" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Дрейк</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Кендрик Ламар" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Кендрик Ламар</p>
+                            </div>                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Эминем" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Эминем</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Дрейк" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Дрейк</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Кендрик Ламар" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Кендрик Ламар</p>
+                            </div>                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Эминем" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Эминем</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Дрейк" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Дрейк</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Кендрик Ламар" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Кендрик Ламар</p>
+                            </div>                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Эминем" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Эминем</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Дрейк" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Дрейк</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Кендрик Ламар" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Кендрик Ламар</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Тупак" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Тупак</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Нас" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Нас</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="50 Cent" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">50 Cent</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Лил Уэйн" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Лил Уэйн</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Карди Би" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Карди Би</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Мик Милл" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Мик Милл</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <img src="/person.png" alt="Трэвис Скотт" class="w-16 h-16 border-2 border-blue-500 rounded-full">
+                                <p class="text-blue-600">Трэвис Скотт</p>
+                            </div>
+                            
+                            <!-- Конец блока -->
+                        </div>
+                        <button id="next1" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-transparent text-blue-600 p-4 rounded-full hover:bg-blue-300" onclick="nav(event)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-center mt-4">
+                        <!-- Контейнер для динамических индикаторов -->
+                        <div id="page-indicators-one" class="flex space-x-2"></div>
+                    </div>
+                </div>
+                <div class="bg-blue-500 text-white rounded-lg p-4">
+                    <h2 class="text-2xl mb-4">Не на месте</h2>
+                    <div class="relative">
+                        <!-- Левая стрелка -->
+                        <button id="prev2" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-transparent text-white p-4 rounded-full hover:bg-blue-400" onclick="nav(event)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+            
+                        <!-- Grid -->
+                        <div id="two" class="grid grid-cols-4 grid-rows-1 gap-2 px-12  overflow-x-auto">
+                            <!-- Пример элементов -->
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 1</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 2</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 3</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 4</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 5</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 6</p>
+                            </div>                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 4</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 5</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 6</p>
+                            </div>                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 4</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 5</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 6</p>
+                            </div>                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 4</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 5</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 6</p>
+                            </div>                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 4</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 5</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 6</p>
+                            </div>                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 4</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 5</p>
+                            </div>
+                            <div class="flex flex-col items-center opacity-60">
+                                <img src="/person.png" alt="Имя" class="rounded-full w-16 h-16">
+                                <p class="text-white">Имя 6</p>
+                            </div>
+                        </div>
+            
+                        <!-- Правая стрелка -->
+                        <button id="next2" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-transparent text-white p-4 rounded-full hover:bg-blue-400" onclick="nav(event)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-center mt-4">
+                        <div id="page-indicators-two" class="flex space-x-2"></div>
+                    </div>
+                
+            </div>
+            <script src="/public/script.js"></script>
+        </div>
+    </section>
+</main>
+<footer class="absolute bottom-0 w-full bg-custom-blue text-white text-center rounded-t-xl py-5 mt-4">
+    <p>&copy; Кто прочитал тот сдохнет.</p>
+</footer>
+</body>
+</html>
